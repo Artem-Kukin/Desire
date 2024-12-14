@@ -1,0 +1,23 @@
+@use "variables" as v;
+@use "placeholders";
+@use "mixins" as m;
+
+.header {
+    padding-block: 4.5rem;
+}
+
+.nav {
+  @include m.d-flex(space-between, center, row, nowrap, 7.2%);
+  font-size: 16px;
+  &__item {
+    @extend %hover-opacity;
+    font-size: 1em;
+    color: v.$color_font-header;
+    font-family: v.$montserrat_b;
+    &--img {
+      pointer-events: none;
+      flex-grow: 1;
+      @include m.d-flex(center, center);
+    }
+  }
+}

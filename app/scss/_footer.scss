@@ -1,0 +1,131 @@
+@use "variables" as v;
+@use "placeholders";
+@use "mixins" as m;
+
+.footer__inner {
+  font-size: 16px;
+
+  padding: 6rem 0 8rem;
+  background: v.$footer_bg;
+  .container {
+    display: flex;
+    column-gap: 6.2%;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+}
+
+.footer__contacts {
+  // font-size: 16px;
+  // margin-right: 10rem;
+
+  h6 {
+    font-family: v.$montserrat_b;
+    font-size: 1em;
+    color: v.$color_grey;
+  }
+  p {
+    max-width: 47.6rem;
+    font-size: 1em;
+    font-family: v.$openSans_r;
+    line-height: 2.7rem;
+    color: v.$color_font-footer;
+    padding-block: 1.4rem;
+  }
+  a {
+    display: inline-block;
+    width: max-content;
+    font-size: 0.875em;
+    color: v.$color_grey;
+    font-family: v.$openSans_sb;
+    line-height: 2.8rem;
+    @extend %hover-opacity;
+    &:hover {
+      .footer__svg {
+        fill: green;
+      }
+    }
+  }
+}
+
+.footer__svg {
+  transition: fill v.$animation;
+  width: 16px;
+  height: 11px;
+  margin-right: 14px;
+  fill: v.$color_grey;
+}
+
+.form {
+  display: flex;
+  align-items: baseline;
+  &__email,
+  &__button {
+    @extend %hover-opacity;
+    cursor: pointer;
+    line-height: 26px;
+    font-size: 1em;
+    font-family: v.$openSans_r;
+    border-radius: 20px;
+    border: 1px solid v.$color_grey;
+  }
+  &__email {
+    padding: 6px 10px 6px 18px;
+    margin: 2.3rem 1rem 0 0;
+    max-width: 36.8rem;
+    width: 100%;
+  }
+
+  &__button {
+    background: v.$color_grey;
+    padding: 6px 12px;
+    max-width: 16rem;
+    width: 100%;
+    color: v.$color_font-button;
+  }
+}
+
+.copyright {
+  padding-block: 4rem;
+  background: v.$color_grey;
+  font-size: 16px;
+  p {
+    font-size: 1em;
+    text-align: center;
+    line-height: 2.8rem;
+    font-family: v.$openSans_r;
+    color: v.$color_font-copyright;
+  }
+}
+
+.footer__social {
+  @include m.d-flex(center, flex-start, column, nowrap, 0, 1.5rem);
+  margin-right: auto;
+  &--link {
+    width: max-content;
+
+    font-family: v.$openSans_sb;
+    line-height: 2.8rem;
+    font-size: 0.875em;
+    color: v.$color_font-footer;
+    @extend %hover-opacity;
+    &:hover {
+      .footer__svg {
+        fill: green;
+      }
+    }
+  }
+}
+
+.footer__links {
+  @include m.d-flex(center, flex-end, column, nowrap, 0, 1.5rem);
+  a {
+    width: max-content;
+
+    font-family: v.$openSans_sb;
+    line-height: 2.8rem;
+    font-size: 0.875em;
+    color: v.$color_font-footer;
+    @extend %hover-opacity;
+  }
+}

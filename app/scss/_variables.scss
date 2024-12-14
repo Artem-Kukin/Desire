@@ -1,0 +1,39 @@
+@font-face {
+    font-family: "openSans_l";
+    src: url(../fonts/OpenSans-Light.ttf);
+}
+@font-face {
+    font-family: "openSans_l-i";
+    src: url(../fonts/OpenSans-LightItalic.ttf);
+}
+@font-face {
+    font-family: "openSans_r";
+    src: url(../fonts/OpenSans-Regular.ttf);
+}
+@font-face {
+    font-family: "openSans_sb";
+    src: url(../fonts/OpenSans-SemiBold.ttf);
+}
+@font-face {
+    font-family: "montserrat_b";
+    src: url(../fonts/Montserrat-Bold.ttf);
+}
+
+ $openSans_l: "openSans_l", sans-serif;
+    $openSans_l-i: "openSans_l-i", sans-serif;
+    $openSans_r: "openSans_r", sans-serif;
+    $openSans_sb: "openSans_sb", sans-serif;
+    $montserrat_b: "montserrat_b", sans-serif;
+    $pages_bg: #ffffff;
+    
+    $color_grey: #363838;
+    $color_font-button: #FFFFF0;
+    $footer_bg: #DFDFDF;
+    $color_font-header: #000000ee;
+    $color_font-footer: #5A5A5A;
+    $color_font-copyright: #A1A1A1;
+    $color-tags-active: #FFEF35;
+    
+    $animation-speed: 0.3s;
+    $animation-func: ease-in-out;
+    $animation: $animation-speed $animation-func;

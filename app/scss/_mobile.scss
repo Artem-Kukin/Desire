@@ -1,0 +1,67 @@
+@use "variables" as v;
+
+.mobile {
+  display: none;
+}
+.btn-close {
+    text-transform: uppercase;
+  width: 75px;
+  border: 2.5px solid red;
+  border-radius: 50%;
+  color: red;
+  font-family: v.$montserrat_b, sans-serif;
+  font-size: 16px;
+  height: 75px;
+  background: transparent;
+}
+.mobile-menu {
+  width: 100%;
+  position: fixed;
+  right: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5%;
+  justify-content: center;
+  font-size: 50px;
+  z-index: 10;
+  height: 100vh;
+  visibility: hidden;
+}
+
+@media (max-width: 580px) {
+  .mobile {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 35px;
+    height: 2px;
+    background: black;
+    padding-block: 4px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    box-sizing: content-box;
+    background-clip: content-box;
+    cursor: pointer;
+  }
+  .nav .nav__item {
+    display: none;
+  }
+  .nav {
+    position: relative;
+  }
+
+  .wrapper.menu-active {
+    position: relative;
+    transform: scale(0.5) translateY(-50%);
+    background: #ffffff;
+    // height: 0;
+    // min-height: auto;
+    z-index: 11;
+    pointer-events: none;
+    opacity: 0.25;
+  }
+}

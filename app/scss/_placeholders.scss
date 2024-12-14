@@ -1,0 +1,16 @@
+@use 'variables' as v;
+
+%hover-opacity {
+    transition: opacity v.$animation;
+    &:hover {
+        opacity: 0.5;
+    }
+}
+%hover-tag {
+    transition: all v.$animation;
+    &:hover {
+        background: v.$color-tags-active;
+        border: 1px solid transparent;
+        color: v.$color_font-footer;
+    }
+}

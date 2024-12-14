@@ -1,0 +1,41 @@
+@use "variables" as v;
+@use "placeholders";
+@use "mixins" as m;
+
+.banner {
+  padding-bottom: 9.3rem;
+  max-height: 42.5vw;
+  position: relative;
+  pointer-events: none;
+  &__background {
+    width: 100%;
+  }
+
+  &__photo__item {
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 35%;
+  }
+  &__descr {
+    pointer-events: auto;
+    font-size: 16px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 63.5rem;
+  }
+  &__title {
+    font-family: v.$montserrat_b;
+    font-size: clamp(4rem, 6vw, 11rem);
+    color: v.$color_grey;
+    margin-bottom: 5.3rem;
+  }
+  &__text {
+    line-height: 2.7rem;
+    font-size: 1em;
+    font-family: v.$openSans_r;
+    color: v.$color_font-footer;
+  }
+}
